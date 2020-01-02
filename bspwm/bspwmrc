@@ -1,18 +1,13 @@
 #! /bin/sh
 
-nitrogen --restore &
 sxhkd &
-compton &
-polybar example &
-# gnome-flashback &
-xsetroot -cursor_name left_ptr &
-# exec /usr/lib/gsd-xsettings &
-# exec /usr/lib/polkit/polkit-gnome-authentication-agent-1 &
+redshift &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4
 
-bspc config border_width        5 
-bspc config window_gap         	0
+bspc config border_width         2
+bspc config window_gap           0 
+bspc config bottom_padding      32
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
