@@ -4,42 +4,23 @@
 
 # terminal emulator
 super + Return
-	termite	
+	xfce4-terminal	
 
 # chrome
 super + shift + Return
 	google-chrome-stable
 
-# vscode
+# code
 super + shift + v
-	code
+	code 
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -show run	
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
-
-# media keys
- 
-XF86AudioRaiseVolume
-	amixer -D pulse sset Master 5%+
-
-XF86AudioLowerVolume
-	amixer -D pulse sset Master 5%-
-
-XF86AudioMute
-	amixer -D pulse set Master 1+ toggle
-
-XF86MonBrightnessUp
-	xbacklight -inc 5 
-
-XF86MonBrightnessDown
-	xbacklight -dec 5
-
-
 
 #
 # bspwm hotkeys
