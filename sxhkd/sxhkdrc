@@ -34,6 +34,10 @@ super + alt + {q,r}
 super + {_,shift + }w
 	bspc node -{c,k}
 
+# adjust gap size
+super + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
+
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
@@ -74,7 +78,7 @@ super + {p,b,comma,period}
 super + {_,shift + }c
 	bspc node -f {next,prev}.local
 
-# focus the next/previous desktop in the current monitor
+# move to previous or next desktop
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
