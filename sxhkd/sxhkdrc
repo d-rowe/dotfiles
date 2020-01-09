@@ -36,7 +36,7 @@ super + {_,shift + }w
 
 # adjust gap size
 super + {equal, minus}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 20 ))
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 16 ))
 
 # alternate between the tiled and monocle layout
 super + m
@@ -130,4 +130,5 @@ super + alt + shift + {h,j,k,l}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+	bspc node -v {-32 0,0 32,0 -32,32 0}
+
